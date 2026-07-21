@@ -2,6 +2,10 @@
 
 **CineSage** is a LangChain-powered application designed to act as an expert Information Extraction AI. It processes movie descriptions and accurately extracts factual information such as title, release year, genres, director, cast, and more.
 
+## UI Screenshot
+
+<!-- USER: PASTE YOUR UI SCREENSHOT HERE ON GITHUB -->
+
 ## Features
 - **Information Extraction**: Extracts structured data from unstructured movie paragraphs.
 - **Powered by Mistral AI**: Uses `ChatMistralAI` with the `mistral-small-2506` model.
@@ -48,7 +52,16 @@
 
 ## Usage
 
-To run the core extraction logic:
+You can run CineSage via its cinematic web interface or as a command-line script.
+
+### Web UI (Recommended)
+To run the Streamlit application:
+```bash
+uv run streamlit run CineSage/UIcore.py
+```
+
+### Command Line
+To run the core extraction logic in the terminal:
 ```bash
 python CineSage/core.py
 ```
