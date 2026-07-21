@@ -1,6 +1,8 @@
 import os
 from dotenv import load_dotenv, find_dotenv
 
+load_dotenv(find_dotenv())
+
 from langchain_mistralai import ChatMistralAI
 from langchain_core.prompts import ChatPromptTemplate
 

@@ -67,3 +67,10 @@ We will use this section to track the progress of the project as we add new feat
 - [ ] Implement robust error handling for missing API keys.
 - [ ] Add support for extracting data into structured JSON output (Pydantic).
 - [ ] (Add more tasks here as we progress)
+
+## Troubleshooting & Learnings
+
+### Mistral API "Unauthorized" Error
+If you encounter an `httpx.HTTPStatusError: 401 Unauthorized` (with detail: `{"detail":"Unauthorized"}`) when running the script, it means the `MISTRAL_API_KEY` is either invalid or not being picked up from the `.env` file.
+
+**Learning**: Even if you import `load_dotenv` from the `python-dotenv` package, you must actually call `load_dotenv(find_dotenv())` before initializing the LangChain models (like `ChatMistralAI`). Without executing `load_dotenv()`, the environment variables remain unloaded, leading to API authentication failures.
