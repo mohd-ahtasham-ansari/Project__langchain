@@ -90,3 +90,8 @@ We will use this section to track the progress of the project as we add new feat
 If you encounter an `httpx.HTTPStatusError: 401 Unauthorized` (with detail: `{"detail":"Unauthorized"}`) when running the script, it means the `MISTRAL_API_KEY` is either invalid or not being picked up from the `.env` file.
 
 **Learning**: Even if you import `load_dotenv` from the `python-dotenv` package, you must actually call `load_dotenv(find_dotenv())` before initializing the LangChain models (like `ChatMistralAI`). Without executing `load_dotenv()`, the environment variables remain unloaded, leading to API authentication failures.
+
+### Streamlit "ModuleNotFoundError"
+If you encounter `ModuleNotFoundError: No module named 'langchain_mistralai'` when running the Streamlit app, it means you are using the global system Python instead of the project's virtual environment.
+
+**Learning**: When using a virtual environment manager like `uv`, always prefix your commands with `uv run` (e.g., `uv run streamlit run CineSage/UIcore.py`). This ensures the command executes within the virtual environment where all your project dependencies (like `langchain-mistralai` and `streamlit`) are installed, rather than falling back to the global Python environment.
