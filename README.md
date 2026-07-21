@@ -4,7 +4,9 @@
 
 ## UI Screenshot
 
-<!-- USER: PASTE YOUR UI SCREENSHOT HERE ON GITHUB --><img width="352" height="815" alt="image" src="https://github.com/user-attachments/assets/726930dd-d539-492c-817f-30612ef40e9a" />
+<!-- USER: PASTE YOUR UI SCREENSHOT HERE ON GITHUB --><img width="1919" height="821" alt="image" src="https://github.com/user-attachments/assets/a0b6fe12-2111-488e-aff0-6efe07dd6d1c" /><img width="1899" height="807" alt="image" src="https://github.com/user-attachments/assets/e00f8018-8c9d-4a37-b6d7-5203989181cd" />
+
+
 
 
 ## Features
