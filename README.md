@@ -4,7 +4,8 @@
 
 ## UI Screenshot
 
-<!-- USER: PASTE YOUR UI SCREENSHOT HERE ON GITHUB -->
+<!-- USER: PASTE YOUR UI SCREENSHOT HERE ON GITHUB --><img width="352" height="815" alt="image" src="https://github.com/user-attachments/assets/726930dd-d539-492c-817f-30612ef40e9a" />
+
 
 ## Features
 - **Information Extraction**: Extracts structured data from unstructured movie paragraphs.
