@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv, find_dotenv
+from pydantic import BaseModel
 
 load_dotenv(find_dotenv())
 
@@ -12,7 +13,7 @@ prompt = ChatPromptTemplate.from_messages([
     ("system","""
 You are an expert Information Extraction AI.
 
-Your task is to carefully read a movie description and identify the most important factual information.
+Your task is to careflly read a movie description and identify the most important factual information.
 
 Extract information such as:
 - Movie title
