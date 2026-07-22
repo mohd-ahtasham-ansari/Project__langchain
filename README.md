@@ -104,3 +104,13 @@ If you encounter an `httpx.HTTPStatusError: 401 Unauthorized` (with detail: `{"d
 If you encounter `ModuleNotFoundError: No module named 'langchain_mistralai'` when running the Streamlit app, it means you are using the global system Python instead of the project's virtual environment.
 
 **Learning**: When using a virtual environment manager like `uv`, always prefix your commands with `uv run` (e.g., `uv run streamlit run CineSage/UIcore.py`). This ensures the command executes within the virtual environment where all your project dependencies (like `langchain-mistralai` and `streamlit`) are installed, rather than falling back to the global Python environment.
+
+### ChatPromptTemplate Message Type Capitalization
+If you encounter validation issues when constructing a `ChatPromptTemplate` using a list of tuples, verify your role strings.
+
+**Learning**: When defining messages for `ChatPromptTemplate.from_messages()`, the role names in the tuples must be lowercase (e.g., `("system", "...")` and `("human", "...")`). Using capitalized roles like `"System"` or `"Human"` will lead to errors, as LangChain strictly expects lowercase standard role identifiers.
+
+### PydanticOutputParser Initialization ValidationError
+If you encounter a `ValidationError` in `core2.py` when initializing the `PydanticOutputParser` (e.g., `1 validation error for PydanticOutputParser...`), the argument name being used is likely outdated.
+
+**Learning**: The correct argument name to pass your Pydantic schema to the `PydanticOutputParser` constructor is `pydantic_object`. For instance, you should use `PydanticOutputParser(pydantic_object=Movie)` rather than `PydanticOutputParser(pydantic_schema=Movie)`.
