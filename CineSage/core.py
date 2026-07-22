@@ -1,14 +1,13 @@
 import os
 from dotenv import load_dotenv, find_dotenv
-from pydantic import BaseModel
+from langchain_mistralai import ChatMistralAI
+from langchain_core.prompts import ChatPromptTemplate
 
 
 load_dotenv(find_dotenv())
 
-from langchain_mistralai import ChatMistralAI
-from langchain_core.prompts import ChatPromptTemplate
-
 model = ChatMistralAI(model ="mistral-small-2506")
+
 
 prompt = ChatPromptTemplate.from_messages([
     ("system","""
