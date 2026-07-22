@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv, find_dotenv
 from pydantic import BaseModel
 
+
 load_dotenv(find_dotenv())
 
 from langchain_mistralai import ChatMistralAI
