@@ -13,6 +13,7 @@
 - **Information Extraction**: Extracts structured data from unstructured movie paragraphs.
 - **Powered by Mistral AI**: Uses `ChatMistralAI` with the `mistral-small-2506` model.
 - **LangChain Integration**: Built using `langchain-core` and `langchain-mistralai`.
+- **Pydantic Support**: Advanced extraction directly to structured JSON schema (Movie object).
 
 ## Prerequisites
 - Python 3.12+ (or compatible version)
@@ -58,15 +59,23 @@
 You can run CineSage via its cinematic web interface or as a command-line script.
 
 ### Web UI (Recommended)
-To run the Streamlit application:
+To run the basic Streamlit application:
 ```bash
 uv run streamlit run CineSage/UIcore.py
+```
+To run the advanced Streamlit application with Pydantic structured output:
+```bash
+uv run streamlit run CineSage/UIcore2.py
 ```
 
 ### Command Line
 To run the core extraction logic in the terminal:
 ```bash
 python CineSage/core.py
+```
+To run the advanced version with Pydantic structured output:
+```bash
+python CineSage/core2.py
 ```
 When prompted, paste a paragraph describing a movie to get the extracted details.
 
@@ -80,9 +89,9 @@ We will use this section to track the progress of the project as we add new feat
 - [x] Set up Git repository.
 - [x] Created the basic `CineSage/core.py` LangChain prompt for movie information extraction.
 - [x] Fixed the message type capitalization error (`System` -> `system`, `Human` -> `human`).
-- [ ] Implement robust error handling for missing API keys.
-- [ ] Add support for extracting data into structured JSON output (Pydantic).
-- [ ] (Add more tasks here as we progress)
+- [x] Implement robust error handling for missing API keys.
+- [x] Add support for extracting data into structured JSON output (Pydantic) via `core2.py` and `UIcore2.py`.
+- [x] Project Complete! 🎉
 
 ## Troubleshooting & Learnings
 
